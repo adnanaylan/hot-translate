@@ -1,0 +1,1 @@
+module.exports = { projectId: '<your_google_cloud_console_project_id>' }

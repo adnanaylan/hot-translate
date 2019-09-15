@@ -1,0 +1,35 @@
+# Hot Translate
+
+Hot Translate is a very small script that translates the clipboard text using Google Translate API and returns the translated text as an OS notification.
+
+## Installation (Only For Linux)
+
+### Get the script
+```sh
+$ git clone git@github.com:onuraylan/hot-translate.git
+```
+
+### Node.js libnotify-bin xsel
+
+This script requires [Node.js](https://nodejs.org/) and some other dependencies to run. To install them:
+
+```sh
+$ sudo apt-get update
+$ sudo apt-get install nodejs libnotify-bin xsel
+```
+
+### Google Translate API
+
+To access the Google's Translate API, you have to create a GCP Console project from Google Cloud. Then enable the Cloud Translation API for that project.
+https://cloud.google.com/translate/docs/quickstart-client-libraries
+
+After you get your private key as JSON. Rename that JSON file as "credentials.json" and simply copy and paste it into the config folder of the script.
+Also, you need to provide your GCP Console project id to the script. Copy your project id from [Google Cloud Console](https://console.cloud.google.com/) and paste it into the project-id.js file in config folder.
+
+### Set Keyboard Shortcut
+
+To make it practical to run, we should set a keyboard shortcut for the script. Simply go to the system settings and define a shortcut(mine is CTRL + SPACE) for this specific command:
+
+```sh
+$ node <your-path-to-script/hot-translate/index.js>
+```

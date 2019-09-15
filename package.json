@@ -1,0 +1,15 @@
+{
+  "name": "hot-translate",
+  "version": "1.0.0",
+  "description": "A script to translate selected text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Onur A. Aylan",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/translate": "^4.1.3",
+    "node-notifier": "^5.4.3"
+  }
+}
