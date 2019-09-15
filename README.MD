@@ -4,13 +4,6 @@ Hot Translate is a very small script that translates the clipboard text using Go
 
 ## Installation (Only For Linux)
 
-### Get the script and install it
-```sh
-$ git clone git@github.com:onuraylan/hot-translate.git
-$ cd hot-translate
-$ npm install
-```
-
 ### Node.js libnotify-bin xsel
 
 This script requires [Node.js](https://nodejs.org/) and some other dependencies to run. To install them:
@@ -18,6 +11,13 @@ This script requires [Node.js](https://nodejs.org/) and some other dependencies 
 ```sh
 $ sudo apt-get update
 $ sudo apt-get install nodejs libnotify-bin xsel
+```
+
+### Get the script and install it
+```sh
+$ git clone git@github.com:onuraylan/hot-translate.git
+$ cd hot-translate
+$ npm install
 ```
 
 ### Google Translate API
