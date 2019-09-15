@@ -35,3 +35,8 @@ To make it practical to run, we should set a keyboard shortcut for the script. S
 ```sh
 $ node <your-path-to-script/hot-translate/index.js>
 ```
+
+### Changing the destination language
+
+Destination language is Turkish by default. You can change it in 'src/translate.js' by editing the variable named 'target' as you wish.
+For example, make it 'en' for the English.
