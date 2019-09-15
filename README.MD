@@ -4,9 +4,11 @@ Hot Translate is a very small script that translates the clipboard text using Go
 
 ## Installation (Only For Linux)
 
-### Get the script
+### Get the script and install it
 ```sh
 $ git clone git@github.com:onuraylan/hot-translate.git
+$ cd hot-translate
+$ npm install
 ```
 
 ### Node.js libnotify-bin xsel
