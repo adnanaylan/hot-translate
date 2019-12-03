@@ -1,20 +1,39 @@
 const notifier = require('node-notifier')
-const { Translate } = require('@google-cloud/translate')
-const util = require('util')
+const axios = require("axios")
+const util = require("util")
 const exec = util.promisify(require('child_process').exec)
-const projectId = require('../config/project-id')
+const config = require("../config/config.json")
 
 module.exports = async () => {
-    const translate = new Translate({ projectId })
-    const target = 'tr'
+    const baseUrl = "https://translate.yandex.net/api/v1.5/tr.json/translate"
 
     const { stdout, stderr } = await exec('xsel -o')
 
-    const [translation] = await translate.translate(stdout, target)
+    if (stderr) {
+        console.error(stderr)
+        return
+    }
 
-    notifier.notify({
-        title: stderr ? 'Error:' : `Text: ${stdout}`,
-        message: stderr ? 'Could not get the selected text' : `Translation: ${translation}`,
-        wait: true
-    })
+    const params = {
+        key: config.keys.yandexTranslate,
+        text: stdout,
+        lang: config.targetLang
+    }
+
+    try {
+        let { data } = await axios.get(baseUrl, { params })
+
+        if (data.code === 200) {
+            notifier.notify({
+                title: `Text: ${stdout}`,
+                message: `Translation: ${data.text[0]}`,
+                wait: true
+            })
+        } else {
+            throw new Error(`An error is occured while getting the translation from API: ${data.code}`)
+        }
+    } catch (error) {
+        console.error(error)
+        return
+    }    
 }
