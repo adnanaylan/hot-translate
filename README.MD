@@ -27,7 +27,8 @@ Since Yandex Translate API is free and more practical than Google Translate API,
 ~~To access the Google's Translate API, you have to create a GCP Console project from Google Cloud. Then enable the Cloud Translation API for that project.~~
 ~~https://cloud.google.com/translate/docs/quickstart-client-libraries~~
 ~~After you get your private key as JSON. Rename that JSON file as "credentials.json" and simply copy and paste it into the config folder of the script.~~
-~~Also, you need to provide your GCP Console project id to the script. Copy your project id from [Google Cloud Console](https://console.cloud.google.com/) and paste it into the project-id.js file in config folder. ~~
+~~Also, you need to provide your GCP Console project id to the script.~~
+~~Copy your project id from [Google Cloud Console](https://console.cloud.google.com/) and paste it into the project-id.js file in config folder.~~
 
 ### Yandex Translate API
 Get your API key from [here](https://tech.yandex.com/translate/) and put it in config.json file.
