@@ -9,7 +9,7 @@
   "author": "Onur A. Aylan",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "node-notifier": "^5.4.3"
   }
 }
